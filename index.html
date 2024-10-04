@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Formulário</h1>
+
+    <!-- Qual a diferencia entre get e post em um formulario: 
+     O atributo action serve para executar uma ação quando usuario tocar ENTER.-->
+    <form action="#" method="post">
+
+        <!-- é um rotulo, uma identificação, serve para identificar algum campo, alguma coisa do formulario.
+     Esse daqui identifica o Nome.
+     for serve para chamar o input, for="nome" conecta o label com input. -->
+        <label for="nome">Nome:</label>
+
+        <!-- Cria uma caixa de texto para o usuario escrever. O atributo name="nome" é o identificador para se conectar com label.
+        O atributo placeholder coloca um texto um pouco transparente dentro da caixa de input. -->
+        <input type="text" name="nome" id="" placeholder="Insira seu nome">
+
+        <br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="" placeholder="Digite sua senha">
+
+        <br>
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="" placeholder="Digite seu e-mail">
+
+        <br>
+
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" id=" " placeholder="Digite sua idade" min="18" max="100" class="small-input">
+
+        <br>
+
+        <label for="website">Website:</label>
+        <input type="url" name="website" id="website" placeholder="https://">
+
+        <br>
+
+        <label for="termos"> Aceito os termos:</label>
+        <input type="checkbox" name="termos" id="termos">
+
+        <br>
+
+
+        <!-- tipo radio significa que es la opción en bola. -->
+        <!-- for conecta com nome para todas as opções (genero). Value é o valor colocado pelo usuario que vai para o banco de dados. -->
+        <label for="genero">Gênero:</label>
+
+
+        <input type="radio" name="genero" id="masculino" class="small-input" value="masculino">
+        <label for="masculino" class="inline-label">Masculino</label>
+
+        <input type="radio" name="genero" id="feminino" value="feminino" class="small-input">
+        <label for="feminino">Feminino</label>
+
+        <input type="radio" name="genero" id="outro" value="outro" class="small-input">
+        <label for="outro" class="inline-label">Outro</label>
+
+        <br>
+
+        <label for="data-nascimento">Data de Nascimento:</label>
+        <input type="date" name="data-nascimento" id="data-nascimento">
+
+        <br>
+
+        <label for="cor-favorita">Cor favorita<label>
+                <input type="color" name="cor-favorita" id="cor-favorita">
+
+                <br>
+
+                <label for="satisfacao">Satisfação (0 a 10):</label>
+                <input type="range" name="satisfacao" id="satisfacao" min="0" max="10">
+
+                <br>
+
+                <!-- Una caja de texto para el usuario escribir, puede ser comentários como en el ejemplo a seguir: -->
+                <label for="comentarios">Comentários</label>
+                <textarea name="comentarios" id="comentarios" rows="8" cols="50"
+                    placeholder="Escreva seu comentário"></textarea>
+
+                <br>
+
+                <label for="pais">País:</label>
+
+                <!-- option*5 é um atalho que repite o elemento 5 vezes para estar preparado. -->
+                <select name="pais" id="">
+                    <option value="bra">Brasil</option>
+                    <option value="eua">Estados Unidos</option>
+                    <option value="cub">Cuba</option>
+                    <option value="jap">Japão</option>
+                    <option value="ale">Alemanha</option>
+                    <option value="extra">Extraterrestre</option>
+
+                </select>
+
+                <label for="arquivo">Carregar arquivo:</label>
+                <input type="file" name="arquivo" id="arquivo">
+
+                <br><br>
+
+                <!-- Tocar el botón hace acontecer la acción definida por el formulario. (form action="#") -->
+                <button type="submit">Enviar</button>
+
+    </form>
+
+    <footer style="color: black; text-shadow: 2px 2px 3px white;">
+        <p>Todos os direitos reservados - Reinier &copy;</p>
+    </footer>
+
+</body>
+
+
+</html>
